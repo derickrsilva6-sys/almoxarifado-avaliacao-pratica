@@ -20,7 +20,7 @@ def criar_usuario(usuario: UsuarioCreate, db: Session = Depends(get_db)):
     db.refresh(novo_usuario)
     return novo_usuario
 
-#Meu ajuste
+#Ajustes feitos
 @router.get("/", response_model = list[UsuarioResponse])
 def Listar_usuarios(
     db: Session = Depends(get_db),
